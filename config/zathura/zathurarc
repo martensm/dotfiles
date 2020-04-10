@@ -1,0 +1,12 @@
+set adjust-open best-fit
+set guioptions ""
+set pages-per-row 1
+set recolor true
+set render-loading false
+set scroll-full-overlap 0.01
+set scroll-page-aware true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen

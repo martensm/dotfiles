@@ -1,0 +1,1 @@
+feh --auto-zoom -B black --draw-tinted --info "feh %F -L '  %wx%h  |  %z%%  |  %f  | %S  |  %t  '" --scale-down

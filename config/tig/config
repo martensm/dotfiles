@@ -1,0 +1,18 @@
+set blob-view = \
+	line-number:yes,interval=1 \
+	text
+set main-view = \
+	id \
+	date:relative \
+	author:full \
+	commit-title:yes,graph,refs
+
+set line-graphics = utf-8
+
+set tab-size = 2
+
+set mouse = yes
+
+bind main R !git rebase -i %(commit)
+bind main ! !git revert %(commit)
+bind status D !@?rm %(file)

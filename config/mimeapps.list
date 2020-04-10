@@ -1,0 +1,14 @@
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+application/x-bittorrent=org.qbittorrent.qBittorrent.desktop
+application/x-wine-extension-ini=nvim.desktop
+image/gif=mpv.desktop
+image/jpeg=feh.desktop
+image/png=feh.desktop
+image/webp=feh.desktop
+text/html=chromium.desktop
+text/plain=nvim.desktop
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop

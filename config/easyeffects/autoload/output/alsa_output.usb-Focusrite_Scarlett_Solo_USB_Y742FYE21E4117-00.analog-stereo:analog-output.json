@@ -1,0 +1,6 @@
+{
+    "device": "alsa_output.usb-Focusrite_Scarlett_Solo_USB_Y742FYE21E4117-00.analog-stereo",
+    "device-description": "Scarlett Solo (3rd Gen.) Analog Stereo",
+    "device-profile": "analog-output",
+    "preset-name": "Sennheiser HD650"
+}

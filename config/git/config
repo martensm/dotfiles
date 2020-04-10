@@ -1,0 +1,78 @@
+[apply]
+	whitespace = nowarn
+[color]
+	ui = auto
+[color "diff-highlight"]
+	newHighlight = green bold 22
+	newNormal = green bold
+	oldHighlight = red bold 52
+	oldNormal = red bold
+[color "diff"]
+	commit = yellow bold
+	frag = magenta bold
+	meta = yellow
+	new = green bold
+	old = red bold
+	whitespace = red reverse
+[core]
+	autocrlf = input
+	pager = diff-so-fancy | less
+	whitespace = -trailing-space
+[diff]
+	mnemonicPrefix = true
+	renames = true
+	submodule = log
+	wordRegex = .
+[difftool]
+	prompt = false
+[fetch]
+	prune = true
+	recurseSubmodules = on-demand
+[github]
+	user = martensm
+[grep]
+	break = true
+	extendedRegexp = true
+	heading = true
+	lineNumber = true
+[init]
+	defaultBranch = main
+[log]
+	abbrevCommit = true
+	follow = true
+	decorate = false
+[merge]
+	conflictStyle = diff3
+	tool = meld
+[mergetool]
+	keepBackup = false
+	keepTemporaries = false
+	writeToTemp = true
+	prompt = false
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[pull]
+	rebase = merges
+[pager]
+	difftool = true
+[push]
+  autoSetupRemote = true
+	followTags = true
+[status]
+	submoduleSummary = true
+	showUntrackedFiles = all
+[tag]
+	sort = version:refname
+[transfer]
+	fsckObjects = true
+[user]
+	useConfigOnly = true
+[versionsort]
+	prereleaseSuffix = -alpha
+	prereleaseSuffix = .alpha
+	prereleaseSuffix = -beta
+	prereleaseSuffix = .beta
+	prereleaseSuffix = -rc
+	prereleaseSuffix = .rc
+[sequence]
+	editor = interactive-rebase-tool

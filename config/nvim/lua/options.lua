@@ -1,0 +1,71 @@
+local o = vim.o
+local bo = vim.bo
+local wo = vim.wo
+local cmd = vim.cmd
+
+o.backspace = 'indent,eol,start'
+o.backup = false
+o.cmdheight = 2
+o.cmdwinheight = 5
+o.diffopt = 'filler,iwhite,internal,algorithm:patience'
+o.display = 'lastline'
+o.equalalways = false
+o.errorbells = true
+o.expandtab = true
+o.foldlevelstart = 99
+o.helpheight = 12
+o.hidden = true
+o.history = 2000
+o.hls = false
+o.indentexpr = 'off'
+o.jumpoptions = 'stack'
+o.laststatus = 2
+o.list = true
+o.listchars = 'nbsp:+,trail:·,extends:→,precedes:←'
+o.magic = true
+o.mouse = 'a'
+o.previewheight = 12
+o.pumblend = 10
+o.pumheight = 15
+o.ruler = false
+o.scrolloff = 2
+o.sessionoptions = 'curdir,help,tabpages,winsize'
+o.shada = "!,'300,<50,@100,s10,h"
+o.shiftwidth = 2
+o.shortmess = 'aoOTIcF'
+o.showbreak = '↳  '
+o.showcmd = false
+o.showmatch = true
+o.showmode = false
+o.showtabline = 2
+o.sidescrolloff = 5
+o.softtabstop = 2
+o.splitbelow = true
+o.splitright = true
+o.startofline = false
+o.swapfile = false
+o.switchbuf = 'useopen'
+o.tabstop = 2
+o.termguicolors = true
+o.textwidth = 80
+o.viewoptions = 'folds,cursor,curdir,slash,unix'
+o.visualbell = true
+o.whichwrap = 'h,l,<,>,[,],~'
+o.wildignore = '.git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,**/node_modules/**'
+o.wildignorecase = true
+o.winblend = 10
+o.winminwidth = 10
+o.winwidth = 30
+o.writebackup = false
+
+bo.autoindent = true
+bo.undofile = true
+
+wo.colorcolumn = '80'
+wo.number = true
+wo.relativenumber = true
+
+cmd('set path+=**')
+cmd('set guifont=Fission,Symbols\\ Nerd\\ Font')
+
+vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank({ higroup = "IncSearch", timeout = 500 })')

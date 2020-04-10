@@ -1,0 +1,5 @@
+ctrl shift 1
+  flameshot gui
+
+ctrl shift alt r
+  kill -SIGUSR1 $(pidof sxhkd)

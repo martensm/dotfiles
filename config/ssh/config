@@ -1,0 +1,9 @@
+# TODO: How to avoid hardcoded path?
+Include ~/dotfiles/config/.data/ssh/config/*
+
+Host *
+  Compression yes
+  ControlMaster auto
+  ControlPath ${XDG_CACHE_HOME}/%r@%h:%p
+  ControlPersist 600
+  PreferredAuthentications=publickey

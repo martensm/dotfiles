@@ -1,0 +1,4 @@
+--glob=!{.git,.svn,node_modules}
+--hidden
+--max-columns=10000
+--smart-case

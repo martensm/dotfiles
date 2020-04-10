@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=IMWheel
+Exec=imwheel -b 45
+Type=Application
+
