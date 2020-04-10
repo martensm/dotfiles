@@ -1,0 +1,7 @@
+direnv 2.27.0
+lua 5.1.5
+nodejs 15.8.0
+python 3.9.1
+ruby 3.0.0
+rust 1.50.0
+yarn 1.22.10

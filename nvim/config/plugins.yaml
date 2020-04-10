@@ -1,0 +1,137 @@
+---
+# PLUGINS
+# ===
+# See config/plugins/all.vim for plugin mappings and config/plugins/*.vim
+
+# Startup
+# -------
+- repo: Shougo/dein.vim
+- repo: itchyny/vim-gitbranch
+- repo: itchyny/vim-parenmatch
+- repo: itchyny/lightline.vim
+- repo: romainl/vim-cool
+- repo: sgur/vim-editorconfig
+- repo: christoomey/vim-tmux-navigator
+
+# Improve CursorHold performance
+# See: https://github.com/neovim/neovim/issues/12587
+- repo: antoinemadec/FixCursorHold.nvim
+
+- repo: tpope/vim-sleuth
+  hook_add: |-
+    let g:sleuth_neighbor_limit = 5
+
+# Lazy Loading
+# ==========================================
+
+# Languages
+# ---------
+
+# Markdown related
+- repo: plasticboy/vim-markdown
+  on_ft: markdown
+  hook_add: |-
+    let g:vim_markdown_frontmatter = 1
+    let g:vim_markdown_strikethrough = 1
+    let g:vim_markdown_folding_disabled = 1
+    let g:vim_markdown_conceal = 1
+    let g:vim_markdown_conceal_code_blocks = 1
+    let g:vim_markdown_new_list_item_indent = 0
+    let g:vim_markdown_toc_autofit = 0
+    let g:vim_markdown_edit_url_in = 'vsplit'
+    let g:vim_markdown_fenced_languages = [
+      \ 'js=javascript',
+      \ 'json=javascript',
+      \ 'jsx=javascriptreact',
+      \ 'tsx=typescriptreact',
+      \ ]
+
+# Javascript related
+- repo: pangloss/vim-javascript
+  on_ft: [javascript, javascriptreact]
+  hook_add: |-
+    let g:javascript_plugin_jsdoc = 1
+
+- repo: HerringtonDarkholme/yats.vim
+  on_ft: [typescript, typescriptreact]
+
+- repo: MaxMEllon/vim-jsx-pretty
+  on_ft: [javascript, javascriptreact, typescriptreact]
+  depends: vim-javascript
+  hook_add: let g:vim_jsx_pretty_colorful_config = 1
+
+- { repo: heavenshell/vim-jsdoc, on_ft: [javascript, javascriptreact] }
+- { repo: moll/vim-node, on_ft: [javascript, javascriptreact] }
+- { repo: elzr/vim-json, on_ft: json }
+- { repo: posva/vim-vue, on_ft: vue }
+
+# Misc
+- { repo: tbastos/vim-lua, on_ft: lua }
+- { repo: rust-lang/rust.vim, on_ft: rust }
+- { repo: vim-jp/syntax-vim-ex, on_ft: vim }
+- { repo: tpope/vim-git, on_ft: [gitcommit, gitrebase, gitconfig] }
+- { repo: tmux-plugins/vim-tmux, on_ft: tmux }
+- { repo: MTDL9/vim-log-highlighting, on_ft: log }
+- { repo: cespare/vim-toml, on_ft: toml }
+
+# ==========================================
+# Commands
+# --------
+- { repo: dstein64/vim-startuptime, on_cmd: StartupTime }
+
+# ==========================================
+# Interface
+# ---------
+- { repo: hotwatermorning/auto-git-diff, on_ft: gitrebase }
+
+- repo: machakann/vim-highlightedyank
+  on_event: TextYankPost
+  hook_source: let g:highlightedyank_highlight_duration = 200
+
+- repo: airblade/vim-gitgutter
+  on_event: FileType
+  hook_add: |-
+    let g:gitgutter_map_keys = 0
+    let g:gitgutter_sign_added = '▎'
+    let g:gitgutter_sign_modified = '▎'
+    let g:gitgutter_sign_removed = '▍'
+    let g:gitgutter_sign_removed_first_line = '▘'
+    let g:gitgutter_sign_removed_above_and_below = '_¯'
+    let g:gitgutter_sign_modified_removed = '▍'
+    let g:gitgutter_preview_win_floating = 1
+    let g:gitgutter_sign_allow_clobber = 0
+    let g:gitgutter_sign_priority = 0
+    let g:gitgutter_override_sign_column_highlight = 0
+
+- repo: nathanaelkane/vim-indent-guides
+  on_event: FileType
+  hook_post_source: IndentGuidesEnable
+  hook_add: |-
+    let g:indent_guides_default_mapping = 0
+    let g:indent_guides_tab_guides = 0
+    let g:indent_guides_color_change_percent = 3
+    let g:indent_guides_guide_size = 1
+    let g:indent_guides_exclude_filetypes = [
+      \ 'help', 'defx', 'denite', 'denite-filter', 'startify',
+      \ 'vista', 'vista_kind', 'tagbar', 'lsp-hover', 'clap_input',
+      \ 'any-jump', 'gina-status', 'gina-commit', 'gina-log'
+      \ ]
+
+- repo: rhysd/committia.vim
+  on_event: BufReadPost
+  hook_source: let g:committia_min_window_width = 70
+
+- repo: norcalli/nvim-colorizer.lua
+  if: has('nvim-0.4')
+  on_event: FileType
+  hook_source: luafile $VIM_PATH/config/plugins/colorizer.lua
+
+# ==========================================
+# Operators
+# ---------
+- repo: machakann/vim-sandwich
+  on_map: { vonx: <Plug>(operator-sandwich- }
+  hook_add: |-
+    let g:sandwich_no_default_key_mappings = 1
+    let g:operator_sandwich_no_default_key_mappings = 1
+    let g:textobj_sandwich_no_default_key_mappings = 1

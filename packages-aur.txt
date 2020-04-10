@@ -1,0 +1,9 @@
+act
+bat-extras-git
+brave-bin
+gitui-bin
+grex
+spotify-tui-bin
+tealdeer
+topgrade
+zoxide

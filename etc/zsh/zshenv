@@ -1,0 +1,10 @@
+# shellcheck shell=bash
+
+set -eEuo pipefail
+
+XDG_CONFIG_HOME="$(dirname "$(dirname "$(dirname "$(readlink -f /etc/zsh/zshenv)")")")"
+export XDG_CONFIG_HOME
+ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+export ZDOTDIR
+export XDG_CACHE_HOME="$XDG_CONFIG_HOME"/.cache
+export XDG_DATA_HOME="$XDG_CONFIG_HOME"/.data

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+#shellcheck disable=1090
+source "$(asdf direnv hook asdf)"
+
+export DIRENV_LOG_FORMAT=

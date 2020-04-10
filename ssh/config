@@ -1,0 +1,9 @@
+Include ~/dotfiles/.data/ssh/config/*
+
+Host *
+  Compression yes
+  ControlMaster auto
+  # TODO: How to avoid hardcoded path?
+  ControlPath ~/dotfiles/.cache/%r@%h:%p
+  ControlPersist 600
+  PreferredAuthentications=publickey
